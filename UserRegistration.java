@@ -5,7 +5,7 @@ public class UserRegistration
 
         public static void main(String[] args)
         {
-                String fname,lname,email,mobile;
+                String fname,lname,email,mobile,password;
                 Scanner sc=new Scanner(System.in);
                 System.out.println("Enter First Name:");
                 fname=sc.nextLine();
@@ -47,6 +47,15 @@ public class UserRegistration
 		{
 			System.out.println("Invalid Mobile Number");
 		}
+		System.out.println("Enter Password:");
+		password=sc.nextLine();
+		if(Pattern.matches("^[a-zA-Z0-9]*{8,32}$",password))
+		{
+			System.out.println("Valid Password");
+		}
+		else
+		{
+			System.out.println("Invalid Password");
+		}
         }
 }
-
