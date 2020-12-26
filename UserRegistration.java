@@ -5,7 +5,7 @@ public class UserRegistration
 
         public static void main(String[] args)
         {
-                String fname,lname;
+                String fname,lname,email;
                 Scanner sc=new Scanner(System.in);
                 System.out.println("Enter First Name:");
                 fname=sc.nextLine();
@@ -27,5 +27,20 @@ public class UserRegistration
                 {
                         System.out.println("Invalid Last Name");
                 }
+		System.out.println("Enter Email:");
+		email=sc.nextLine();
+		if(Pattern.matches("^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$",email))
+		{
+			System.out.println("Valid Email");
+		}
+		else
+		{
+			System.out.println("Invalid Email");
+		}
         }
 }
+
+
+
+
+
