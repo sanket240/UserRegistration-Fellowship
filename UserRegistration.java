@@ -49,7 +49,7 @@ public class UserRegistration
 		}
 		System.out.println("Enter Password:");
 		password=sc.nextLine();
-		if(Pattern.matches("^[a-zA-Z0-9]*{8,32}$",password))
+		if(Pattern.matches("^(?=.*[A-Z]).{8,32}$",password))
 		{
 			System.out.println("Valid Password");
 		}
